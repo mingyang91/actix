@@ -30,7 +30,7 @@ mailbox_assert = []
 
 [dependencies]
 actix-macros = { version = "0.2", optional = true }
-actix-rt = { version = "2", default-features = false }
+actix-rt = { git = "https://github.com/mingyang91/actix-net.git", default-features = false, features = ["macros"] }
 actix_derive = { version = "0.6", optional = true }
 
 bitflags = "2"
@@ -51,6 +51,7 @@ tokio-util = { version = "0.7", features = ["codec"] }
 [dev-dependencies]
 doc-comment = "0.3"
 futures-util = { version = "0.3.22", default-features = false, features = ["alloc"] }
+actix-rt = { git = "https://github.com/mingyang91/actix-net.git" }
 
 [[example]]
 name = "fibonacci"
